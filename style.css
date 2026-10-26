@@ -1,8 +1,9 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 nav {
   display: flex;
   align-items: center;
@@ -17,8 +18,9 @@ h1 {
   align-items: center;
   padding-left: 25px;
   height: inherit;
-  color: rgb(255, 0, 0);
+  color: red;
 }
+
 .heading {
   display: flex;
   align-items: center;
@@ -26,6 +28,7 @@ h1 {
   width: 30%;
   height: inherit;
 }
+
 .all_links {
   display: flex;
   align-items: center;
@@ -34,9 +37,11 @@ h1 {
   width: 80%;
   height: inherit;
 }
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: white;
@@ -52,52 +57,64 @@ li:hover {
   border-radius: 3px;
   border-bottom: solid red 1px;
 }
+
 a:hover {
   color: black;
   padding: 10px;
 }
 
 @media (max-width: 784px) {
-  .all_links {
-    display: none;
+  nav {
+    position: relative;
   }
+
   .heading {
     width: auto;
   }
+
+  .all_links {
+    display: none;
+  }
+
+  .all_links.active {
+    display: flex;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 10;
+  }
+
   .menu_btn {
     display: block;
-    /* padding-right: 20px; */
     margin-right: 20px;
-    font-size: 19px;
-    background-color: inherit;
+    font-size: 28px;
+    background: transparent;
+    color: white;
     border: none;
     cursor: pointer;
   }
-  .active.all_links {
-    display: flex;
-    position: absolute;
-    background-color: black;
-    top: 10.4vh;
-    flex-direction: column;
-    width: 100%;
-    height: 50vh;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
 
   li {
-    background-color: #ffffff;
-    width: 20%;
-    padding: 4px;
+    background-color: white;
+    width: auto;
+    padding: 4px 10px;
     text-align: center;
     border-radius: 12px;
   }
+
   a {
     color: black;
-    font-weight: bolder;
-    width: auto;
-    padding: auto;
+    font-weight: bold;
   }
+
   a:hover {
     color: red;
   }
