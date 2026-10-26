@@ -84,6 +84,7 @@ a:hover {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
+
   li {
     background-color: #ffffff;
     width: 20%;
@@ -94,6 +95,8 @@ a:hover {
   a {
     color: black;
     font-weight: bolder;
+    width: auto;
+    padding: auto;
   }
   a:hover {
     color: red;
